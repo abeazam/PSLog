@@ -32,6 +32,14 @@
 
 #import <Foundation/Foundation.h>
 
+//add this if def to allow the user to continue using NSLog 
+//but will replace it with PSLog in debug and remove it when live 
+#ifdef DEBUG
+#   define NSLog(...)   PSLog(__VA_ARGS__)
+#else
+#    define NSLog(...)  /* */
+#endif
+
 #ifdef DEBUG
 
 #define PSLogDebug(...)		NSLog(@"[%@] DEBUG: %s %@", ([[NSThread currentThread] isMainThread] ? @"Main Thread" : [NSString stringWithFormat:@"Thread %p", [NSThread currentThread]]), __func__, [NSString stringWithFormat:__VA_ARGS__])

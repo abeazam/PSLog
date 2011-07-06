@@ -1,1 +1,13 @@
-Found this class in a few places very useful allows you to replace NSLog and only logs at debug.
+None Dependant version of PSLog
+
+Found this class in a few places very useful NSLog replacement.
+
+Provides you with more information. Than the regular native log.
+
+I have modified it so if you use NSLog it will be replaced with PSLog. If you only want to use PSLog log it removes the dependancy on this class so your classes can be used on other projects without needing this one included. 
+
+This has only been applied to the PSLog function if you want to use the other PSLogs they will create a dependancy on the class.
+
+USAGE:
+Import it in the .pch which will put it in scope of the entire project and remove the need to add it to the head of every class.  
+ 
